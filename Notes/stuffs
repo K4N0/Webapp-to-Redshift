@@ -1,0 +1,18 @@
+
+0
+down vote
+I have resolved this problem with reinstall go-lang use follow steps:
+
+Thanks for @ssk's answer in question: How to deploy Apprtc's collider into Google App Engine?
+Collider needs to be deployed in Google Compute Engine or equivalent services by Amazon. Here is the list of steps that I had go through:
+
+1) Install go from: https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz
+2) Set PATH variable: export PATH=$PATH:/usr/local/go/bin
+3) Set GOROOT export GOROOT=/usr/local/go
+4) Set GOPATH (must be different from GOROOT) export GOPATH=/usr/local/go-dependencies (have to create go-dependencies directory if not there)
+5) Checkout apprtc code: git clone https://github.com/webrtc/apprtc.git
+6) Copy collider files to $GOROOT/src: sudo cp -rf apprtc/src/collider/collider /usr/local/go/src/ sudo cp -rf apprtc/src/collider/collidermain /usr/local/go/src/ sudo cp -rf apprtc/src/collider/collidertest /usr/local/go/src/
+7) Install websocket: go get -v golang.org/x/net/websocket
+8) Install Dependencies: go get collidermain
+9) Install collidermain: go install collidermain
+10 Run collidermain: /usr/local/go/bin/collidermain -port=8089 -tls=false (need a certificate to run with tls enabled)
