@@ -14,7 +14,3 @@ $$('.color-picker')[0].on('click', '.square', function(event, square) {
   });
 });
 
-/*
- * Original version at
- * http://red-team-design.com/making-html-dropdowns-not-suck
- */
