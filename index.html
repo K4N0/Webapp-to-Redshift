@@ -1,20 +1,12 @@
-<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+<p>Hello, {{.Name}}</p>
 
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Custom dropdown</title>
-   
-      <link rel="stylesheet" href="public/css/style.css">
-
-</html>
-
-<img src="public\img\800x400\01.jpg" width="600" height="300">
-
-<h1>Welcome to the new dev website</h1>
-
-<h2>Some stuff</h2>
-
-<h3>More stuff</h3>
-
+{{ if .DBStatus}}
+<p>The database connection is alive!</p>
+{{else}}
+<p>The database connection is dead!hoping this autosaves</p>
+{{end}}
+  </body>
 </html>
