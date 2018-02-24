@@ -5,8 +5,9 @@ import (
 	"html/template"
 	"net/http"
 
-	_ "github.com/mattn/go-sqlite3"
 	"encoding/json"
+
+	_ "github.com/mattn/go-sqlite3"
 )
 
 //Page blahblahblah
@@ -15,6 +16,7 @@ type Page struct {
 	DBStatus bool
 }
 
+//Page blahblahblah1
 type SearchResult struct {
 	Title  string
 	Author string
@@ -49,9 +51,10 @@ func main() {
 		encoder := json.NewEncoder(w)
 		if err := encoder.Encode(results); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
+
+		}
 	})
 
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	http.ListenAndServe(":3000", nil)
-
 }
