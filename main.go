@@ -2,11 +2,11 @@ package main
 
 import (
 	"database/sql"
+	"encoding/json"
 	"html/template"
 	"net/http"
 
-	"encoding/json"
-
+	_ "github.com/gorilla/websocket"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -30,6 +30,7 @@ func main() {
 	db, _ := sql.Open("sqlite3", "test.db")
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "index.html")
 		p := Page{Name: "Gopher"}
 		if name := r.FormValue("name"); name != "" {
 			p.Name = name

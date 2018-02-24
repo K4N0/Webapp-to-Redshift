@@ -1,0 +1,51 @@
+@media screen{
+    .header{
+        width:768px;
+        height:100px;
+        border:2px solid #000;
+    }
+
+    .content{
+        width:768px;
+        margin-top:10px;
+        margin-bottom:10px;
+        height:1000px;
+    }
+
+    .footer{
+        width:768px;
+        height:100px;
+        border:2px solid #000;
+    }
+}
+
+@media print {    
+    .header{
+        position:fixed;
+        top:0;
+        left:0;
+        width:768px;
+        height:100px;
+        border:2px solid #000;
+    }
+
+    .content{
+        width:768px;
+        margin-top:120px;
+        margin-bottom:120px;
+        height:1000px;
+    }
+
+    .footer{
+        position:fixed;
+        left:0;
+        bottom:0;
+        width:768px;
+        height:100px;
+        border:2px solid #000;
+    }
+
+    @page{
+        margin-bottom:150px;
+    }
+}
