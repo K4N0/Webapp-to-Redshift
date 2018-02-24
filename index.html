@@ -3,12 +3,13 @@
   <head></head>
   <body>
 
-<!--      <img src="public\img\800x400\01.jpg" width="600" height="300">
+<!-- -->
+      <img src="public\img\800x400\01.jpg" width="1200" height="150">
       <link rel="stylesheet" href="public/css/style.css">
       <h1>Welcome to the new dev website</h1>
       <h2>Some stuff</h2>
       <h3>More stuff</h3>
--->
+
 
     <form id="search form" onsubmit="return false">
           <input name="search"/>
@@ -40,25 +41,15 @@
               var searchResults = $("#search-results");
               searchResults.empty();
 
+              parsed.forEach(function(result) {
+                var row = $("<tr><td>" + result.Title + "</td><td>" + result.Author + "</td><td>" +result.Year + "</td><td>" + result.ID + "</td><td>");
+                searchResults.append(row);
+              });
             }
         });
 
         return false;
       }
-    <script>
-  </body>
-</html>
-
-
-<html>
-  <head></head>
-  <body>
-    <p>Hello, {{.Name}}</p>
-
-    {{ if .DBStatus}}
-    <p>The database connection is live!</p>
-    {{else}}
-    <p>The database connection is dead!</p>
-    {{end}}
+    </script>
   </body>
 </html>

@@ -16,7 +16,7 @@ type Page struct {
 	DBStatus bool
 }
 
-//Page blahblahblah1
+//SearchResult blahblahblah1
 type SearchResult struct {
 	Title  string
 	Author string
