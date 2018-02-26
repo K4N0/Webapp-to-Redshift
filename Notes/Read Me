@@ -31,4 +31,11 @@ go get -v golang.org/x/net/websocket
 --------------------------------------------------------------------------------------------------
 to auto refresh webservers
 go get github.com/pilu/fresh
+-------------------------------------------------------
+run 
+ go get github.com/mattn/go-sqlite3
+go get github.com/gorilla/websocket
+after installing GCCsetup in the installation folder.
+Make sure to add in the enviormental path,  C:\TDM-GCC-64\bin\
+
 
