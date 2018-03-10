@@ -37,5 +37,16 @@ run
 go get github.com/gorilla/websocket
 after installing GCCsetup in the installation folder.
 Make sure to add in the enviormental path,  C:\TDM-GCC-64\bin\
+-------------------------------------------------------------------------
+html auto refresh code, goes in between the head
+<html>
+  <head>     jsut this part     <meta http-equiv="refresh" content="30" />            </head>
+  <body>
+the rest of this is an example of where it went.     
+      <img src="public\images\baigebanner.png" width="900" height="150">
+      <link rel="stylesheet" href="public/css/style.css">
+      <h1>Welcome to the new dev website</h1>
+      <h2>Some stuff</h2>
+      <h3>More stuff</h3>
 
 
